@@ -57,3 +57,11 @@ python mapping.py output/normalize/test.clean /home/wangyang/workspace/gusphdpro
 python normalize.py ./output/normalize/test.clean.sorted.bam.merged.quant ./output/deeparg/test.clean.deeparg.mapping.ARG.merged.quant
 
 
+deeparg predict \
+    --type nucl \
+    --model SS -d /home/wangyang/workspace/gusphdproj-deeparg-ss-fbe063e24cf7/database \
+    -i ./output/clean/test.clean \
+    -o ./tmp/test.clean.deeparg \
+    --arg-alignment-identity 80 \
+    --min-prob 0.8 \
+    --arg-alignment-evalue 1e-10
