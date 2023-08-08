@@ -6,3 +6,8 @@ diamond  blastx \
     --sensitive \
     -e 1e-10 \
     -a ./tmp2/test.clean.deeparg.align
+
+
+diamond view \
+    -a tmp2/test.clean.deeparg.align.daa \
+    -o tmp2/test.clean.deeparg.align.tsv
